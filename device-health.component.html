@@ -1,0 +1,39 @@
+<div class="widget-container">
+    <div class="header">
+      <h2>Device Issues by Importance</h2>
+      <a href="#" class="view-details">View Details</a>
+    </div>
+    <p class="subtitle">Live data</p>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ISSUES</th>
+          <th>DEVICES</th>
+          <th>HOW TO FIX</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Critical Section -->
+        <tr>
+          <td colspan="3" class="section-title critical">Critical</td>
+        </tr>
+        <tr *ngFor="let issue of criticalIssues">
+          <td class="issue">• {{ issue.key }}</td>
+          <td>{{ issue.devices }}</td>
+          <td><a href="#">{{ issue.fix }}</a></td>
+        </tr>
+  
+        <!-- Urgent Section -->
+        <tr>
+          <td colspan="3" class="section-title urgent">Urgent</td>
+        </tr>
+        <tr *ngFor="let issue of urgentIssues">
+          <td class="issue">• {{ issue.key }}</td>
+          <td>{{ issue.devices }}</td>
+          <td><a href="#">{{ issue.fix }}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
